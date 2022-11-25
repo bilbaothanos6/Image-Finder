@@ -20,7 +20,7 @@ lmain = ctk.CTkLabel(height = 512, width = 512)
 lmain.place(x = 10, y = 110)
 modelid = "CompVis/stable-diffusion-v1-4"
 device = "mps"
-pipe = StableDiffusionPipeline.from_pretrained(modelid, revision = "fp16", torch_dtype = torch.float16, use_auth_token = auth_token)
+pipe = StableDiffusionPipeline.from_pretrained(modelid, use_auth_token = auth_token)
 pipe.to(device)
 
 def generate():
